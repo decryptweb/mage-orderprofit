@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>DW_OrderProfit</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>An extension that will add a 'Profit' column in Orders grid showing profit per order</summary>
+    <description>An extension that will add a 'Profit' column in Orders grid showing profit per order. Configuration setting are provided for disabling the column and editing the column header.</description>
+    <notes>An easy way to know profit per order from Orders grid with configuration settings available</notes>
+    <authors><author><name>DecryptWeb Solutions</name><user>dwweb</user><email>contact@decryptweb.com</email></author></authors>
+    <date>2013-09-18</date>
+    <time>11:41:15</time>
+    <contents><target name="mageetc"><dir><dir name="modules"><file name="DW_OrderProfit.xml" hash="988924cdf544cf8606e7dabc3e9e6d1a"/></dir></dir></target><target name="magecommunity"><dir><dir name="DW"><dir name="OrderProfit"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="a64749d11b5b2809861fccbef656a590"/><dir name="Renderer"><file name="Profit.php" hash="73285a781cd853aff1e463f8b275d981"/></dir></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="8ea91de1f073215694e32e9a18b0cc75"/><file name="system.xml" hash="90e1e5aa2212ccdf554400acb35bc734"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.5.0.0</min><max>1.7.0.2</max></package></required></dependencies>
+</package>

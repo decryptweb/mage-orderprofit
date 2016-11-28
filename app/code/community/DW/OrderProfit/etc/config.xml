@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * DecryptWeb OrderProfit Extension
+ *
+ * This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @category    DW
+ * @package     DW_OrderProfit
+ * @copyright   Copyright (c) 2013 DecryptWeb (http://www.decryptweb.com) All Rights Reserved.
+ * @license     http://www.gnu.org/licenses/gpl-3.0.html  GNU/GPL
+ */
+-->
+<config>
+	<modules>
+	  <DW_OrderProfit>
+	    <version>1.0.0</version>
+	  </DW_OrderProfit>
+	</modules>	
+	<global>		
+	<!--below code for overriding the order grid -->
+	<!--start--> 	
+		<blocks>
+			<adminhtml>
+				<rewrite>
+					<sales_order_grid>DW_OrderProfit_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+				</rewrite>
+			</adminhtml>         
+        </blocks>        
+	<!--end--> 	
+	</global>	
+	<!--for permissions-->
+	<!--start-->
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<dw_orderprofit translate="title">
+											<title>OrderProfit by DecryptWeb</title>
+											<sort_order>51</sort_order>
+										</dw_orderprofit>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<!--end-->
+</config>
